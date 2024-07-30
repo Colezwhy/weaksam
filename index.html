@@ -144,31 +144,11 @@
         </div>
     </div>
 
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Framework & Method</h2>
-                <p>
-                    An overview of the proposed WeakSAM framework. We first generate activation maps from a classification ViT. Subsequently, we introduce classification clues and spatial points as automatic WeakSAM prompts, which address the problem of SAM requiring interactive prompts. Next, we use the WeakSAM proposals in the WSOD pipeline, in which the weakly-supervised detector performs class-aware perception to annotate pseudo ground truth (PGT). Then, we analyze the incompleteness and the noise problem existing in PGT and propose adaptive PGT generation, RoI drop regularization to address them, respectively. Finally, we launch WSIS training supervised by pseudo instance labels, which requires adaptive PGT as SAM prompts. The snowflake mark means the model is frozen.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="container" style="max-width: 768px;">
-        <div class="row captioned_videos">
-            <div class="col-md-12">
-                <img src="sources/weaksam_pipeline_v4.0_1.png" alt="architecture" style="width: 100%">
-
-            </div>
-        </div>
-    </div>
-
-
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Addressing weaknesses in weakly-supervised instance-level recognition </h2>
+                <h2>Weaknesses in weakly-supervised instance-level recognition </h2>
 
                 <h3>Low-quality proposals in WSOD</h3>
 
@@ -187,6 +167,26 @@
             </div>
         </div>
     </div>
+
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Proposed Framework & Method</h2>
+                <p>
+                    An overview of the proposed WeakSAM framework. We first generate activation maps from a classification ViT. Subsequently, we introduce classification clues and spatial points as automatic WeakSAM prompts, which address the problem of SAM requiring interactive prompts. Next, we use the WeakSAM proposals in the WSOD pipeline, in which the weakly-supervised detector performs class-aware perception to annotate pseudo ground truth (PGT). Then, we analyze the incompleteness and the noise problem existing in PGT and propose adaptive PGT generation, RoI drop regularization to address them, respectively. Finally, we launch WSIS training supervised by pseudo instance labels, which requires adaptive PGT as SAM prompts. The snowflake mark means the model is frozen.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+                <img src="sources/weaksam_pipeline_v4.0_1.png" alt="architecture" style="width: 100%">
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- <div class="container" style="max-width: 500px;">
         <div class="row captioned_videos">
