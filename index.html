@@ -136,7 +136,7 @@
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Framework</h2>
+                <h2>Framework & Method</h2>
                 <p>
                     An overview of the proposed WeakSAM framework. We first generate activation maps from a classification ViT. Subsequently, we introduce classification clues and spatial points as automatic WeakSAM prompts, which address the problem of SAM requiring interactive prompts. Next, we use the WeakSAM proposals in the WSOD pipeline, in which the weakly-supervised detector performs class-aware perception to annotate pseudo ground truth (PGT). Then, we analyze the incompleteness and the noise problem existing in PGT and propose adaptive PGT generation, RoI drop regularization to address them, respectively. Finally, we launch WSIS training supervised by pseudo instance labels, which requires adaptive PGT as SAM prompts. The snowflake mark means the model is frozen.
                 </p>
@@ -157,25 +157,31 @@
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Proposed Method</h2>
+                <h2>Addressing weaknesses in weakly-supervised instance-level recognition </h2>
 
-                <h3>Peak Points Extraction</h3>
+                <h3>Low-quality proposals in WSOD</h3>
 
-                <p> After obtaining classification clues, it is intuitive that we could use them to help us capture regions or points with high semantic correspondence. Thus we proposed Peak Point Extraction Algorithm to achieve our goal.</p>
+                <p> This figure shows the cosine similarity among the features of proposals, i.e., Left for Selective Search proposals and Right for WeakSAM-proposals. For a single image from PASCAL VOC 2007, we randomly sampled 200 proposal features to calculate their similarity. This suggests that the usually used proposal set in WSOD show great redundancy, which hinders the optimization process of WSOD models.</p>
+                <img src="sources/proposal_comp_v1.1.png" alt="architecture" style="width: 50">
+                
+                <h3>Noisy pseudo ground truth(PGT) in retraining</h3>
+                <p> The figures below show the relationship between the normalized classification and regression loss, the corresponding number of RoIs, and the corresponding error rate. The results are obtained from training the Faster-RCNN using PGT in the preliminary training stage.</p>
+                
+                <img src="sources/instance_grad_cls_v1.5.png" alt="architecture" style="width: 50">
+                <img src="sources/instance_grad_reg_v1.0.png" alt="architecture" style="width: 50">
 
-                <p> Given cross-attention maps or CAMs as input, we first initialize the peak points list P, peak values list V, deleted lists P_delete, V_delete, and max pooling operation. Next, we reshape the input maps and ensure the last two dimensions correspond to the original image size and the others as the first dimension. Then, we apply max pooling on the input maps M, and sort V and P in descending order based on V. Last, we remove points with low activation values or close to high-score points.</p>
             </div>
         </div>
     </div>
 
-    <div class="container" style="max-width: 500px;">
+    <!-- <div class="container" style="max-width: 500px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <img src="sources/algo1.png" alt="architecture" style="width: 100%">
 
             </div>
         </div>
-    </div>
+    </div> -->
     
 
     <hr class="divider" />
