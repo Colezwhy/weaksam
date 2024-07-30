@@ -37,13 +37,13 @@
 <body>
 
     
-    <div class="container" style="max-width: 500px;">
+    <!-- <div class="container" style="max-width: 500px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <img src="sources/vis_det_v1.6.png" alt="architecture" style="width: 100%">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="highlight-clean" style="padding-bottom: 10px;">
         <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
@@ -172,50 +172,29 @@
             </div>
         </div>
     </div>
-
-
-    <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Video</h2>
-            </div>
-
-            <div class="container" style="max-width: 768px;">
-                <div class="row captioned_videos">
-                    <div class="col-md-12">
-                        <div style="position:relative;padding-top:56.25%;">
-                            <iframe src="https://www.youtube.com/embed/GNzlUdQ1RBQ" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     
 
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-sm-12">
-                <h2>Comparison Results</h2>
-                <p>Qualitative comparisons between our method and <a href="https://dreamfusion3d.github.io/">DreamFusion</a>, <a href="https://research.nvidia.com/labs/dir/magic3d/">Magic3D</a>, <a href="https://fantasia3d.github.io/">Fantasia3D</a> and <a href="https://ml.cs.tsinghua.edu.cn/prolificdreamer/">ProlificDreamer</a>.</a></p>
+                <h2>Experiments & Results</h2>
+                <p>We evaluate the proposed WeakSAM on both weakly-supervised object detection (WSOD) and weakly-supervised instance segmentation (WSIS) benchmarks. Notably, the same datasets for different tasks may have different settings. For WSOD, we use three datasets, i.e., PASCAL VOC 2007, PASCAL VOC 2012, and COCO 2014.</a>.</a></p>
             </div>
 
             <div class="container" style="max-width: 768px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
-                        <img src="static/compare.png" alt="architecture" style="width: 100%">
+                        <p> Comparisons of the WSOD performance in terms of AP metrics on three benchmarks: PASCAL VOC 2007, PASCAL VOC 2012, and COCO 2014. The Sup. column denotes the type of supervision used for training including full supervision (F), point-level labels (P), image-level labels (I). “*” means the results rely on MCG proposals. “‡” means this method use the a heavy RN50-WS-MRRP backbone (1.76 × parameters than VGG16 and 10.10 × parameters than RN50). We mark the best WSOD results in bold.</p>
+                        <img src="sources/wsod.png" alt="architecture" style="width: 100%">
                     </div>
                 </div>
             </div>
-            <div class="container" style="max-width: 768px;">
+            <div class="container" style="max-width: 600px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
-                        <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                            <source data-src="./static/onlycom.mp4" type="video/mp4"></source>
-                        </video>
+                        <p> Comparisons of the WSIS performance in terms of AP metrics on PASCAL VOC 2012. The Sup. column denotes the type of supervision used for training including mask supervision (M), saliency maps (S), image-level labels (I), and SAM models (A). We mark the best WSIS results in bold. </p>
+                        <img src="sources/wsis_voc.png" alt="architecture" style="width: 100%">
                     </div>
                 </div>
             </div>
