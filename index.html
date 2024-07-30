@@ -160,7 +160,7 @@
                 <h2>Proposed Method</h2>
 
                 <h3>Peak Points Extraction</h3>
-                
+
                 <p> After obtaining classification clues, it is intuitive that we could use them to help us capture regions or points with high semantic correspondence. Thus we proposed Peak Point Extraction Algorithm to achieve our goal.</p>
 
                 <p> Given cross-attention maps or CAMs as input, we first initialize the peak points list P, peak values list V, deleted lists P_delete, V_delete, and max pooling operation. Next, we reshape the input maps and ensure the last two dimensions correspond to the original image size and the others as the first dimension. Then, we apply max pooling on the input maps M, and sort V and P in descending order based on V. Last, we remove points with low activation values or close to high-score points.</p>
@@ -185,7 +185,9 @@
                 <h2>Experiments & Main Results</h2>
                 <p>We evaluate the proposed WeakSAM on both weakly-supervised object detection (WSOD) and weakly-supervised instance segmentation (WSIS) benchmarks. Notably, the same datasets for different tasks may have different settings. For WSOD, we use three datasets, i.e., PASCAL VOC 2007, PASCAL VOC 2012, and COCO 2014.</a>.</a></p>
             </div>
+
             <br><br>
+
             <div class="container" style="max-width: 768px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
@@ -194,7 +196,9 @@
                     </div>
                 </div>
             </div>
+
             <br><br>
+
             <div class="container" style="max-width: 768px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
@@ -203,7 +207,9 @@
                     </div>
                 </div>
             </div>
+
             <br><br>
+            
             <div class="container" style="max-width: 768px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
